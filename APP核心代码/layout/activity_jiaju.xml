@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_toolbar_jiaju"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:background="#6750A4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 返回按钮 -->
+    <ImageView
+        android:id="@+id/image_icon_jiaju"
+        android:layout_width="70dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:contentDescription="返回按钮"
+        app:layout_constraintTop_toTopOf="@id/image_toolbar_jiaju"
+        app:layout_constraintStart_toStartOf="@id/image_toolbar_jiaju"
+        app:layout_constraintBottom_toBottomOf="@id/image_toolbar_jiaju"
+        />
+
+    <ImageView
+        android:id="@+id/image_refresh_jiaju"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_refresh_foreground"
+        android:contentDescription="刷新按钮"
+        app:layout_constraintTop_toTopOf="@id/image_toolbar_jiaju"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/image_toolbar_jiaju"
+        />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="144dp"
+        android:layout_height="99dp"
+        android:text="集群模式"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/image_refresh_jiaju"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_toolbar_jiaju" />
+    <View
+        android:id="@+id/image_toolbar_jiaju_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/image_toolbar_jiaju"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/jiaju_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/jiaju_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

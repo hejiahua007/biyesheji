@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@drawable/item_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/itemtext_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="时间"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+
+    <!-- 添加 layout_weight="1" 到每个 TextView 中 -->
+    <TextView
+        android:id="@+id/itemtext_wendu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="温度"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/itemtext_shidu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="湿度"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/itemtext_guangzhao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="光照"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/itemtext_co2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="气体"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/itemtext_shengxiang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="声响"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/itemtext_fengli"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="声响"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

@@ -1,8 +1,4 @@
-# 腾讯云asr,输入base64编码的wav音频，输出text，此函数需异步调用，以节约请求事件
-#from tencentcloud.common import credential
-#from tencentcloud.common.profile.client_profile import ClientProfile
-#from tencentcloud.common.profile.http_profile import HttpProfile
-#from tencentcloud.asr.v20190614 import asr_client, models
+
 from aip import AipSpeech
 import struct
 import pvporcupine
@@ -15,7 +11,7 @@ import wave
 import pvcobra
 import time
 
-porcupine_key = "cinmq/v7vHEzd3vrbTD9I24KiGgxbmUBXjxCcgG8kGnx8l48h57L6g=="
+porcupine_key = **
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
 # 读取文件
 def get_file_content(filePath):  # filePath  待读取文件名
@@ -73,9 +69,9 @@ def save_audio(data, filename="../file/tmp/recorded_audio.wav"):
     return filename
 
 ''' 你的APPID AK SK  参数在申请的百度云语音服务的控制台查看'''
-APP_ID = '41921615'
-API_KEY = 'fOgFWfWduay5wB63zkZ4khIF'
-SECRET_KEY = 'K0ze3w6Pt6aKO6avbPxea31iIxgZ21qy'
+APP_ID = '*'
+API_KEY = '*'
+SECRET_KEY = '*'
 textPath = '../file/tmp/text.txt'
 # 新建一个AipSpeech
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)

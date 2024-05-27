@@ -22,8 +22,8 @@ if IS_PY3:
     from urllib.error import URLError
     from urllib.parse import urlencode
     from urllib.parse import quote_plus
-API_KEY = 'KThaU1v7FACrsajULJFnd91i'
-SECRET_KEY = 'qtmkx4Wu7HxxEDZuD6yfmdr1IQZpHZ35'
+API_KEY = '**'
+SECRET_KEY = '**'
 PER = 4#yin se 
 SPD = 5# 语速，取值0-15，默认为5中语速
 PIT = 5# 音调，取值0-15，默认为5中语调
@@ -32,8 +32,8 @@ VOL = 5# 音量，取值0-9，默认为5中音量
 AUE = 6
 FORMATS = {3: "mp3", 4: "pcm", 5: "pcm", 6: "wav"}
 FORMAT = FORMATS[AUE]
-CUID = "ZqUrIw9dNGYfnXL2uOLQiGwLQ22p39HV"
-TTS_URL = 'http://tsn.baidu.com/text2audio'
+CUID = "**"
+TTS_URL = '**'
 #定义一个自定义异常类 DemoError，用于处理可能的异常情况。
 
 commands_to_audio = {
@@ -123,7 +123,7 @@ commands_to_audio2 = {
 class DemoError(Exception):
     pass
 """  TOKEN start """
-TOKEN_URL = 'http://aip.baidubce.com/oauth/2.0/token'
+TOKEN_URL = '*'
 SCOPE = 'audio_tts_post'  # 有此scope表示有tts能力，没有请在网页里勾选
 #noise_scale(控制感情变化程度)
 vitsNoiseScale = 0.6
@@ -314,17 +314,4 @@ def speak2(TEXT):
     play_audio("../file/tmp/output2.wav")
 
 
-#speak('好的，主人。正在关闭每日睡前状态检测。', 0)
-#speak('好的，主人。正在打开睡前状态检测。', 0)
-#speak('主人。摄像头读取失败。', 0)
-#speak('主人。目标人物处于睡眠状态。', 0)
-#speak('主人。睡眠环境识别为微亮。', 0)
-#speak('主人。检测不出目标人物行为', 0)
-#speak("好的，主人！", 0)
-#speak2("好的，主人")
-#async def main():
-#    if not _init_vits_model:
-#        init_vits_model()
-#    await asyncio.gather(start(),)
 
-#asyncio.run(main())

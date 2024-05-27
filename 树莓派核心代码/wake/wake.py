@@ -3,8 +3,8 @@ import pvporcupine
 import pyaudio
 import struct
 import wave
-#porcupine_key = "cinmq/v7vHEzd3vrbTD9I24KiGgxbmUBXjxCcgG8kGnx8l48h57L6g=="
-porcupine_key = "e/r9CarH95u5FzdL4hcS88BXYchJFKHCBSqGskmDuP24IuEpmOe0fg=="
+#porcupine_key = **
+porcupine_key = **
 
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
 

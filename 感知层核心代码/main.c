@@ -47,7 +47,7 @@ int main(void)
 	guangzhao = bh_data_read()*4/1.2;  //光照强度的计算公式 = 寄存器值*分辨率/1.2 
 		
 	//获取co2
-	ad = ADC_Trans();//？？？？？？？？？接收不到adc的值
+	ad = ADC_Trans();
 	co2 = ad * 99 / 4096.0;//为什么要乘99  把AD值转换成百分比0~99
 	//printf("电压值：%f\r\n",3.3/4095*ad);	
 		

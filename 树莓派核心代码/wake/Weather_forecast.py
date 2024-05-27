@@ -2,11 +2,11 @@ import requests
 import time
 import speaking
 from clock import Alarm_add,Alarm_del
-api_key = "f061fce1d03d462c86c349063560cfdb"
+api_key = "*"
 city_name = "麻章"
 
 # 通过城市查询接口获取城市ID
-city_url = f"https://geoapi.qweather.com/v2/city/lookup?key={api_key}&location={city_name}&lang=zh"
+city_url = f"*"
 
 def weather_forecast():
     city_response = requests.get(city_url)

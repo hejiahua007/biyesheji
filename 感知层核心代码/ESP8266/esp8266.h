@@ -10,7 +10,7 @@
 #pragma anon_unions
 #endif
 
-//ESP8266Ä£Ê½Ñ¡Ôñ
+//ESP8266Ä£Ê½Ñ¡ï¿½ï¿½
 typedef enum
 {
     STA,
@@ -18,12 +18,12 @@ typedef enum
     STA_AP  
 }ENUM_Net_ModeTypeDef;
 
-//ÍøÂç´«Êä²ãÐ­Òé£¬Ã¶¾ÙÀàÐÍ
+//ï¿½ï¿½ï¿½ç´«ï¿½ï¿½ï¿½Ð­ï¿½é£¬Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 typedef enum{
      enumTCP,
      enumUDP,
 } ENUM_NetPro_TypeDef;
-//Á¬½ÓºÅ£¬Ö¸¶¨Îª¸ÃÁ¬½ÓºÅ¿ÉÒÔ·ÀÖ¹ÆäËû¼ÆËã»ú·ÃÎÊÍ¬Ò»¶Ë¿Ú¶ø·¢Éú´íÎó
+//ï¿½ï¿½ï¿½ÓºÅ£ï¿½Ö¸ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ÓºÅ¿ï¿½ï¿½Ô·ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ò»ï¿½Ë¿Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 typedef enum{
     Multiple_ID_0 = 0,
     Multiple_ID_1 = 1,
@@ -33,13 +33,13 @@ typedef enum{
     Single_ID_0 = 5,
 } ENUM_ID_NO_TypeDef;
 
-#define ESP8266_RST_Pin          GPIO_Pin_4    //¸´Î»¹Ü½Å
-#define ESP8266_RST_Pin_Port     GPIOA    //¸´Î» 
-#define ESP8266_RST_Pin_Periph_Clock  RCC_APB2Periph_GPIOA       //¸´Î»Ê±ÖÓ
+#define ESP8266_RST_Pin          GPIO_Pin_4    //ï¿½ï¿½Î»ï¿½Ü½ï¿½
+#define ESP8266_RST_Pin_Port     GPIOA    //ï¿½ï¿½Î» 
+#define ESP8266_RST_Pin_Periph_Clock  RCC_APB2Periph_GPIOA       //ï¿½ï¿½Î»Ê±ï¿½ï¿½
 
-#define ESP8266_CH_PD_Pin     GPIO_Pin_5   //Ê¹ÄÜ¹Ü½Å
-#define ESP8266_CH_PD_Pin_Port     GPIOA   //Ê¹ÄÜ¶Ë¿Ú
-#define ESP8266_CH_PD_Pin_Periph_Clock  RCC_APB2Periph_GPIOA                     //Ê¹ÄÜÊ±ÖÓ
+#define ESP8266_CH_PD_Pin     GPIO_Pin_5   //Ê¹ï¿½Ü¹Ü½ï¿½
+#define ESP8266_CH_PD_Pin_Port     GPIOA   //Ê¹ï¿½Ü¶Ë¿ï¿½
+#define ESP8266_CH_PD_Pin_Periph_Clock  RCC_APB2Periph_GPIOA                     //Ê¹ï¿½ï¿½Ê±ï¿½ï¿½
 
 
 #define ESP8266_RST_Pin_SetH     GPIO_SetBits(ESP8266_RST_Pin_Port,ESP8266_RST_Pin)
@@ -51,27 +51,25 @@ typedef enum{
 
 
 #define ESP8266_USART(fmt, ...)  USART_printf (USART2, fmt, ##__VA_ARGS__)    
-#define PC_USART(fmt, ...)       printf(fmt, ##__VA_ARGS__)       //ÕâÊÇ´®¿Ú´òÓ¡º¯Êý£¬´®¿Ú1£¬Ö´ÐÐprintfºó»á×Ô¶¯Ö´ÐÐfputº¯Êý£¬ÖØ¶¨ÏòÁËprintf¡£
+#define PC_USART(fmt, ...)       printf(fmt, ##__VA_ARGS__)       //ï¿½ï¿½ï¿½Ç´ï¿½ï¿½Ú´ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Ö´ï¿½ï¿½printfï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ö´ï¿½ï¿½fputï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½printfï¿½ï¿½
 
 
 
-#define User_ESP8266_SSID     "USER_509"          //wifiÃû
-//#define User_ESP8266_SSID     "K"          //wifiÃû
-#define User_ESP8266_PWD      "3643731ZSC"      //wifiÃÜÂë
-//#define User_ESP8266_PWD      "k12345678"      //wifiÃÜÂë
+#define User_ESP8266_SSID     "***"          //wifiï¿½ï¿½
+#define User_ESP8266_PWD      "***"      //wifiï¿½ï¿½ï¿½ï¿½
 
 
-//Wifi Á¬½Ó·þÎñÆ÷£ºµçÄÔºÍESP8266 Á¬½ÓµÄÊÇÍ¬Ò»¸öÂ·ÓÉÆ÷
-#define User_ESP8266_TCPServer_IP     "192.168.43.94"     //·þÎñÆ÷IP
-#define User_ESP8266_TCPServer_PORT   "8888"      				//·þÎñÆ÷¶Ë¿ÚºÅ
+//Wifi ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ESP8266 ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
+#define User_ESP8266_TCPServer_IP     "192.168.43.94"     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IP
+#define User_ESP8266_TCPServer_PORT   "8888"      				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¿Úºï¿½
 
 
-extern volatile uint8_t TcpClosedFlag;  //Á¬½Ó×´Ì¬±êÖ¾
+extern volatile uint8_t TcpClosedFlag;  //ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½Ö¾
 
 void ESP8266_STA_TCPClient_Test(void);
 
-#define RX_BUF_MAX_LEN 1024       //×î´ó×Ö½ÚÊý
-extern struct STRUCT_USART_Fram   //Êý¾ÝÖ¡½á¹¹Ìå
+#define RX_BUF_MAX_LEN 1024       //ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½
+extern struct STRUCT_USART_Fram   //ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½á¹¹ï¿½ï¿½
 {
     char Data_RX_BUF[RX_BUF_MAX_LEN];
     union 
@@ -87,7 +85,7 @@ extern struct STRUCT_USART_Fram   //Êý¾ÝÖ¡½á¹¹Ìå
 }ESP8266_Fram_Record_Struct;
 
 
-//³õÊ¼»¯ºÍTCP¹¦ÄÜº¯Êý
+//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½TCPï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½
 void ESP8266_Init(u32 bound);
 void ESP8266_AT_Test(void);
 bool ESP8266_Send_AT_Cmd(char *cmd,char *ack1,char *ack2,u32 time);
@@ -104,7 +102,7 @@ void USART_printf( USART_TypeDef * USARTx, char * Data, ... );
 
 void ESP8266_STA_TCPClient_Test(void);
 
-//MQTT¹¦ÄÜº¯Êý
+//MQTTï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½
 //bool ESP8266_MQTTUSERCFG( char * pClient_Id, char * pUserName,char * PassWord);
 //bool ESP8266_MQTTCONN( char * Ip, int Num);
 //bool ESP8266_MQTTSUB(char * Topic);

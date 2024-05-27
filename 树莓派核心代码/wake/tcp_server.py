@@ -3,23 +3,23 @@ import threading
 from multiprocessing import Pipe
 import sqlite1
 import select
-HOST = '192.168.43.94'
+HOST = '***'
 APP_address = '192.168.43.1'
 #APP_address = '192.168.43.1'
-PC_address = '192.168.43.112'
-DUOJI_address = '192.168.43.22'
+PC_address = '***'
+DUOJI_address = '***'
 PORT = 8888
 commands = {
-    'kaideng': lambda: send_to_client("LED:2\n", "192.168.43.20", APP_address) ,
-    'guandeng': lambda: send_to_client("LED:0\n", "192.168.43.20", APP_address) ,
-    'kaichuanglian': lambda: send_to_client("CHUANGLIAN:2\n", "192.168.43.22", APP_address),
-    'kaichuanglian1': lambda: send_to_client("CHUANGLIAN:1\n", "192.168.43.22", APP_address),
-    'guanchuanglian': lambda: send_to_client("CHUANGLIAN:0\n", "192.168.43.22", APP_address),
-    'kaizhiwuqi': lambda: send_to_client("ZHIWUQI:2\n", "192.168.43.21", APP_address),   
-    'guanzhiwuqi': lambda: send_to_client("ZHIWUQI:0\n", "192.168.43.21", APP_address),
-    'kaifengshan': lambda: send_to_client("FENGSHAN:2\n", "192.168.43.22", APP_address),
-    'guanfengshan': lambda: send_to_client("FENGSHAN:0\n", "192.168.43.22", APP_address),
-    'kaifengshan1': lambda: send_to_client("FENGSHAN:1\n", "192.168.43.22", APP_address)
+    'kaideng': lambda: send_to_client("LED:2\n", "***", APP_address) ,
+    'guandeng': lambda: send_to_client("LED:0\n", "***", APP_address) ,
+    'kaichuanglian': lambda: send_to_client("CHUANGLIAN:2\n", "***", APP_address),
+    'kaichuanglian1': lambda: send_to_client("CHUANGLIAN:1\n", "***", APP_address),
+    'guanchuanglian': lambda: send_to_client("CHUANGLIAN:0\n", "***", APP_address),
+    'kaizhiwuqi': lambda: send_to_client("ZHIWUQI:2\n", "***", APP_address),   
+    'guanzhiwuqi': lambda: send_to_client("ZHIWUQI:0\n", "***", APP_address),
+    'kaifengshan': lambda: send_to_client("FENGSHAN:2\n", "***", APP_address),
+    'guanfengshan': lambda: send_to_client("FENGSHAN:0\n", "***", APP_address),
+    'kaifengshan1': lambda: send_to_client("FENGSHAN:1\n", "***", APP_address)
 }
 server_state = {
     "kongtiao": "0",
@@ -213,17 +213,17 @@ def handle_client(client_socket, client_address):
             continue
             
         if message.startswith("app_ledon"):
-            send_to_client("LED:2\n", "192.168.43.20", APP_address) 
+            send_to_client("LED:2\n", "***", APP_address) 
             continue
         if message.startswith("app_ledoff"):
-            send_to_client("LED:0\n", "192.168.43.20", APP_address)  
+            send_to_client("LED:0\n", "***", APP_address)  
             continue
             
         if message.startswith("app_zhiwuqion"):
-            send_to_client("ZHIWUQI:2\n", "192.168.43.21", APP_address) 
+            send_to_client("ZHIWUQI:2\n", "***", APP_address) 
             continue
         if message.startswith("app_zhiwuqioff"):
-            send_to_client("ZHIWUQI:0\n", "192.168.43.21", APP_address)   
+            send_to_client("ZHIWUQI:0\n", "***", APP_address)   
             continue
             
         if message.startswith("app_kongtiaoon"):
@@ -239,13 +239,13 @@ def handle_client(client_socket, client_address):
             send_to_client("CHUANGHU:0\n", "192.168.1.6", APP_address)   
             continue
         if message.startswith("app_chuanglianon1"):
-            send_to_client("CHUANGLIAN:1\n", "192.168.43.22", APP_address) 
+            send_to_client("CHUANGLIAN:1\n", "***", APP_address) 
             continue
         if message.startswith("app_chuanglianon2"):
-            send_to_client("CHUANGLIAN:2\n", "192.168.43.22", APP_address) 
+            send_to_client("CHUANGLIAN:2\n", "***", APP_address) 
             continue
         if message.startswith("app_chuanglianoff"):
-            send_to_client("CHUANGLIAN:0\n", "192.168.43.22", APP_address)   
+            send_to_client("CHUANGLIAN:0\n", "***", APP_address)   
             continue
         if message.startswith("app_tishion"):
             send_to_client("TISHI:2\n", "192.168.1.6", APP_address) 
@@ -254,13 +254,13 @@ def handle_client(client_socket, client_address):
             send_to_client("TISHI:0\n", "192.168.1.6", APP_address)   
             continue
         if message.startswith("app_fengshanon1"):
-            send_to_client("FENGSHAN:1\n", "192.168.43.22", APP_address) 
+            send_to_client("FENGSHAN:1\n", "***", APP_address) 
             continue
         if message.startswith("app_fengshanon2"):
-            send_to_client("FENGSHAN:2\n", "192.168.43.22", APP_address) 
+            send_to_client("FENGSHAN:2\n", "***", APP_address) 
             continue
         if message.startswith("app_fengshanoff"):
-            send_to_client("FENGSHAN:0\n", "192.168.43.22", APP_address)   
+            send_to_client("FENGSHAN:0\n", "***", APP_address)   
             continue
 
         if len(data_batch) == 4:  # 检查列表中的元组数量是否达到20
@@ -282,7 +282,7 @@ def handle_custom_commands(message, sender_ip):
     for command in custom_commands:
         if command in message:
             # 根据需要修改目标 IP
-            target_ip = "192.168.43.112"
+            target_ip = "***"
             send_to_client(message, '192.168.43.1',target_ip)
             return
 

@@ -7,7 +7,7 @@ import io
 import wave
 import time
 
-porcupine_key = "cinmq/v7vHEzd3vrbTD9I24KiGgxbmUBXjxCcgG8kGnx8l48h57L6g=="
+porcupine_key = *
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
 
 def keyword_wake_up():

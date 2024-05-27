@@ -30,7 +30,7 @@ prompt_ch = [
 ]
 tmp_prompt=[]
 
-zhipuai.api_key = "1f80f87197b083fe5ac67173e98156a7.S4ykoDw2xDFxOuhf"
+zhipuai.api_key = "*.*"
 def pack_record(role: str, content: str):
     return {"role": role, "content": content}
 def structure_prompt(text: str, user_history: list,role:str):
@@ -69,24 +69,4 @@ def chat(text: str, user_upload_history: list):
     return text_response
 
 
-#chat('おはよう',prompt_jan)
-#start_time = time.time()  # 记录开始时间
-#tmp_prompt = prompt_ch#
-#chat('你是猫咪吗？',tmp_prompt)
-#end_time = time.time()  # 记录结束时间
-#elapsed_time = end_time - start_time
-#print(f"chat函数执行时间: {elapsed_time}秒")
 
-
-
-
-# chat('这所学校有多少人',tmp_prompt)
-# chat('学校有多少个专业',tmp_prompt)
-# chat('有没有数学与计算机专业',tmp_prompt)
-# chat('该专业你知道有多少人吗',tmp_prompt)
-# chat('这些都学习什么课程',tmp_prompt)
-# chat('课程难度是怎么样的',tmp_prompt)
-# chat('老师布置的作用是怎么样的',tmp_prompt)
-# chat('老师漂亮吗',tmp_prompt)
-# chat('这所学校叫什么',tmp_prompt)
-# chat('我有问过你广东海洋大学是什么时候成立的吗',tmp_prompt)

@@ -6,10 +6,10 @@ import numpy as np
 import wake
 import pvcobra
 import pvrhino
-porcupine_key = "cinmq/v7vHEzd3vrbTD9I24KiGgxbmUBXjxCcgG8kGnx8l48h57L6g=="
+porcupine_key = *
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
 
-ACCESS_KEY = "e/r9CarH95u5FzdL4hcS88BXYchJFKHCBSqGskmDuP24IuEpmOe0fg=="
+ACCESS_KEY = "***
 WAV_PATH = '/home/pi/Desktop/sleep/file/tmp/recorded_audio.wav'
 CONTEXT_PATH = '/home/pi/Desktop/sleep/file/model/zhiling_zh_raspberry-pi_v3_0_0.rhn'
 LIBRARY_PATH = None  # or 'path/to/your/library'
@@ -132,16 +132,3 @@ def rhino_file():
     
     
 
-#rhino_file()
-# 调用函数
-#result = rhino_file()
-#print(result)
-'''
-while 1:
-    time.sleep( 3 )
-    if wake.keyword_wake_up() == 1:
-                print("打开识别")
-                user_word = rhino_file()
-                print("打印所识别到的：",user_word)
-    else:
-        continue'''

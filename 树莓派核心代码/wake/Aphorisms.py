@@ -2,7 +2,7 @@ import requests
 import speaking
 from clock import Alarm_add,Alarm_del
 
-url = "https://v1.hitokoto.cn/?c=a&c=c&c=e&c=f&c=h&c=i&c=k"
+url = "**"
 
 def yiyan():
 	response = requests.get(url)
@@ -20,10 +20,8 @@ def yiyan():
 	
 def open_yiyan():
     #speaking.play_audio("../file/aphorism/kaiqi.wav")
-    #Alarm_add("21:50:00", 4)
-    Alarm_add("15:55:00", 4)
-    Alarm_add("15:56:00", 4)
-    Alarm_add("15:57:00", 4)
+    Alarm_add("21:50:00", 4)
+
     
     
 def close_yiyan():

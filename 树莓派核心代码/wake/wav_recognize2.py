@@ -9,15 +9,15 @@ import wave
 import pvcobra
 import time
 import rhino0
-porcupine_key = "cinmq/v7vHEzd3vrbTD9I24KiGgxbmUBXjxCcgG8kGnx8l48h57L6g=="
+porcupine_key = "*/*=="
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
 def get_file_content(filePath):  # filePath  待读取文件名
     with open(filePath, 'rb') as fp:
         return fp.read()
 ''' 你的APPID AK SK  参数在申请的百度云语音服务的控制台查看'''
-APP_ID = '41921615'
-API_KEY = 'fOgFWfWduay5wB63zkZ4khIF'
-SECRET_KEY = 'K0ze3w6Pt6aKO6avbPxea31iIxgZ21qy'
+APP_ID = '*'
+API_KEY = '*'
+SECRET_KEY = '*'
 textPath = '../file/tmp/text.txt'
 # 新建一个AipSpeech
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)

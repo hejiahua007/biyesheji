@@ -5,7 +5,7 @@ import pvrhino
 from pvrecorder import PvRecorder
 
 # 直接在文件中定义参数
-ACCESS_KEY = "e/r9CarH95u5FzdL4hcS88BXYchJFKHCBSqGskmDuP24IuEpmOe0fg=="
+ACCESS_KEY = "*/*=="
 CONTEXT_PATH = '/home/pi/Desktop/sleep/file/model/zhiling_zh_raspberry-pi_v3_0_0.rhn'
 LIBRARY_PATH = None  # 或 'path/to/your/library'
 MODEL_PATH = '/home/pi/Desktop/sleep/file/model/rhino_params_zh.pv'

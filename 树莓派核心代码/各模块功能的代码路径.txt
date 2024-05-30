@@ -1,0 +1,15 @@
+树莓派-主程序代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/test_main.py
+树莓派-语音唤醒功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/wake.py
+树莓派-家具指令识别功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/rhino0.py
+树莓派-语音识别功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/wav_recognize2.py
+树莓派-语音合成功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/speaking.py
+树莓派-智能对话功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/chat.py
+树莓派-中日翻译功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/translate.py
+树莓派-天气预报功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/Weather_forecast.py
+树莓派-时钟功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/clock.py
+树莓派-一言功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/Aphorisms.py
+树莓派-音乐功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/music.py
+树莓派-备忘录功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/memorandum.py
+树莓派-睡前检测功能代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/sleep_detection.py
+树莓派-通信模块代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/tcp_server.py
+树莓派-存储模块代码：https://github.com/hejiahua007/biyesheji/blob/main/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81/wake/sqlite1.py

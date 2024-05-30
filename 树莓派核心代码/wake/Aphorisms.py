@@ -1,3 +1,9 @@
+#文件：Aphorisms.py
+#功能描述：
+#
+#
+#
+
 import requests
 import speaking
 from clock import Alarm_add,Alarm_del

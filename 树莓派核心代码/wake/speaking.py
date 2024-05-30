@@ -1,4 +1,7 @@
-import subprocess
+# 文件名：speaking.py
+# 功能描述：实现语音合成和播放功能，包括支持不同语言的文本转语音，并播放生成的音频文件。
+
+
 import argparse
 import torch
 import time

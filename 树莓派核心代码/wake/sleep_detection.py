@@ -1,3 +1,7 @@
+# 文件名：sleep_detection.py
+# 功能描述：使用摄像头检测睡前状态，包括环境光强和行为（如使用手机或阅读书本），并进行播报。
+
+
 import cv2
 import numpy as np
 import onnxruntime as ort

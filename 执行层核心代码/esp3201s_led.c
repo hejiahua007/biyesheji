@@ -1,6 +1,3 @@
-//增加如下功能：
-//1.连接上wifi，并且设置ip=192.168.1.20，端口什么的
-//2.写收到信息时的反馈代码，受到led=1,就向服务器发送led_ready，收到led=2，就打开led灯(digitalWrite(0, 0);digitalWrite(2, 0);),并向服务器发送led_on,收到led=0，就关闭led灯（digitalWrite(0, 1);digitalWrite(2, 1);），并且向服务器发送led_off；
 
 #include <ESP8266WiFi.h>?
 const char ssid[] = "USER_509";      //WiFi名

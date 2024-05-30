@@ -1,35 +1,51 @@
+#文件名：wav_recognize2.py
+#功能描述：识别。它支持使用百度语音识别和 Rhino 意图识别模型，通过语音命令控制智能家居设备。
+
 from aip import AipSpeech
-import struct
-import pvporcupine
-import pyaudio
-import json
-import base64
-import io
-import wave
-import pvcobra
 import time
 import rhino0
+
+# 替换为你的 Porcupine 访问密钥和模型路径
 porcupine_key = "*/*=="
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
-def get_file_content(filePath):  # filePath  待读取文件名
+
+def get_file_content(filePath):
+    """读取音频文件内容
+    
+    Args:
+        filePath (str): 待读取文件的路径
+    
+    Returns:
+        bytes: 音频文件内容
+    """
     with open(filePath, 'rb') as fp:
         return fp.read()
-''' 你的APPID AK SK  参数在申请的百度云语音服务的控制台查看'''
+
+# 替换为你的百度云语音服务的 APPID、API_KEY 和 SECRET_KEY
 APP_ID = '*'
 API_KEY = '*'
 SECRET_KEY = '*'
 textPath = '../file/tmp/text.txt'
-# 新建一个AipSpeech
+
+# 新建一个 AipSpeech 实例
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 
 def baidu_stt(filename):
+    """使用百度语音识别进行语音转文字
+    
+    Args:
+        filename (str): 音频文件路径
+    
+    Returns:
+        str: 转换后的文字
+    """
     wordStr = ''
     result = client.asr(get_file_content(filename), 'wav', 16000, {'dev_pid': 1536})
 
     if result['err_msg'] == 'success.':
         print("stt successful")
         word = result['result'][0].encode('utf-8')  # utf-8编码
-        wordStr = word.decode('utf-8')  # Decode the bytes to a string
+        wordStr = word.decode('utf-8')  # 解码为字符串
 
         if wordStr != '':
             if wordStr[-3:] == '，':
@@ -48,10 +64,19 @@ def baidu_stt(filename):
     return wordStr
 
 def listen(model: str = "baidu"):
+    """监听音频输入并进行语音识别和意图识别
+    
+    Args:
+        model (str): 使用的语音识别模型，默认为百度
+    
+    Returns:
+        str: 识别的语音指令或意图
+    """
     start_time = time.time()  # 记录开始时间
 
-    # 改进后
+    # 使用 Rhino 进行意图识别
     result = rhino0.rhino_file()
+
 
     print(result)
 

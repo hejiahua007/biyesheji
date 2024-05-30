@@ -1,3 +1,6 @@
+# 文件名：tcp_server.py
+# 功能描述：提供TCP服务器功能，接收客户端的连接并处理其请求。
+
 import socket
 import threading
 from multiprocessing import Pipe

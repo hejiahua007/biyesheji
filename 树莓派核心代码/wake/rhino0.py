@@ -2,17 +2,21 @@ import pyaudio
 import wave
 import struct
 import time
-import numpy as np
-import wake
 import pvcobra
 import pvrhino
-porcupine_key = *
+
+# 文件：wake_word_record_and_inference.py
+# 功能描述：实现关键词唤醒、录音和语音指令识别功能。通过Porcupine检测唤醒词并启动录音，然后使用Rhino进行语音指令的识别。
+
+# Porcupine的API密钥和模型文件路径
+porcupine_key = "YOUR_PORCUPINE_KEY"
 porcupine_model = '../file/model/hello-chat_en_raspberry-pi_v3_0_0.ppn'
 
-ACCESS_KEY = "***
+# Rhino的API密钥和模型文件路径
+ACCESS_KEY = "YOUR_RHINO_KEY"
 WAV_PATH = '/home/pi/Desktop/sleep/file/tmp/recorded_audio.wav'
 CONTEXT_PATH = '/home/pi/Desktop/sleep/file/model/zhiling_zh_raspberry-pi_v3_0_0.rhn'
-LIBRARY_PATH = None  # or 'path/to/your/library'
+LIBRARY_PATH = None
 MODEL_PATH = '/home/pi/Desktop/sleep/file/model/rhino_params_zh.pv'
 SENSITIVITY = 0.5
 ENDPOINT_DURATION_SEC = 1.0
@@ -27,8 +31,6 @@ def record_wav(output_filename='/home/pi/Desktop/sleep/file/tmp/recorded_audio.w
         sample_rate (int): 采样率。
         channels (int): 通道数。
         frames_per_buffer (int): 缓冲区帧数。
-        silence_threshold (int): 静默阈值。
-        silence_limit (int): 静默检测帧数限制。
 
     Returns:
         None
@@ -52,8 +54,8 @@ def record_wav(output_filename='/home/pi/Desktop/sleep/file/tmp/recorded_audio.w
         pcm = stream.read(frames_per_buffer)
         _pcm = struct.unpack_from("h" * frames_per_buffer, pcm)
         is_voiced = cobra.process(_pcm)
-        print(is_voiced,silence_count)
-        silence_count = 0 if is_voiced > 0.1 else silence_count  + 1
+        print(is_voiced, silence_count)
+        silence_count = 0 if is_voiced > 0.1 else silence_count + 1
         if silence_count <= 100:
             if silence_count < 70:
                 frames.append(pcm)
@@ -61,10 +63,12 @@ def record_wav(output_filename='/home/pi/Desktop/sleep/file/tmp/recorded_audio.w
             break
     end_time = time.time()
     print("Finished recording.")
+    
     # 停止音频流
     stream.stop_stream()
     stream.close()
     audio.terminate()
+
     # 保存录音
     with wave.open(output_filename, 'wb') as wf:
         wf.setnchannels(channels)
@@ -74,7 +78,18 @@ def record_wav(output_filename='/home/pi/Desktop/sleep/file/tmp/recorded_audio.w
 
     elapsed_time = end_time - start_time
     print(f"record_wav函数执行时间: {elapsed_time}秒")
+
 def read_file(file_name, sample_rate):
+    """
+    读取wav文件并返回音频帧。
+
+    Args:
+        file_name (str): wav文件路径。
+        sample_rate (int): 采样率。
+
+    Returns:
+        list: 音频帧。
+    """
     wav_file = wave.open(file_name, mode="rb")
     channels = wav_file.getnchannels()
     sample_width = wav_file.getsampwidth()
@@ -91,10 +106,16 @@ def read_file(file_name, sample_rate):
     wav_file.close()
 
     frames = struct.unpack('h' * num_frames * channels, samples)
-
     return frames[::channels]
+
 def rhino_file():
-    
+    """
+    使用Rhino进行语音指令识别。
+
+    Returns:
+        dict: 识别的意图和槽位。
+        str: 音频文件路径。
+    """
     record_wav()
     try:
         rhino = pvrhino.create(
@@ -129,6 +150,3 @@ def rhino_file():
             break
 
     return '/home/pi/Desktop/sleep/file/tmp/recorded_audio.wav'
-    
-    
-

@@ -1,10 +1,12 @@
+#文件名：test_main.py
+#功能描述：这个脚本实现了一个智能家居控制系统，包含语音识别、指令执行、定时任务等功能。通过父子进程和管道实现不同功能模块的协同工作。支持中文和日语两种语言，可以控制灯光、窗帘、风扇、音乐播放、备忘录、天气预报和格言输出等功能，并且能够定时执行一些预设的任务。
+
 import os
 import sys
 from multiprocessing import Process, Pipe
 import time
 
 def run_server(pipe):
-    import tcp_server
     tcp_server.run_server(pipe)
     
 if __name__ == '__main__':
@@ -26,13 +28,11 @@ if __name__ == '__main__':
         
         import wake
         import wav_recognize2
-        #import recognize2
         import speaking
         import chat
         import translate
         import Weather_forecast
         import clock
-        import Aphorisms
         import time
         import music
         import Aphorisms

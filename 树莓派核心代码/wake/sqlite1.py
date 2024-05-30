@@ -1,3 +1,6 @@
+# 文件名：sqlite1.py
+# 功能描述：提供对SQLite数据库的操作，包括创建表、插入数据、查询数据等功能。
+
 import sqlite3
 import os
 from datetime import datetime

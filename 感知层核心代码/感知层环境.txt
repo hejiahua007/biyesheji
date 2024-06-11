@@ -1,0 +1,23 @@
+1. 电源
+供电电压：5V
+电源输入：通过USB接口
+
+2. 编程接口：SWD（串行线调试）、USART
+
+3. 开发环境
+IDE（集成开发环境）：、eil MDK-ARM、IAR Embedded Workbench、
+
+4. 编程工具：ST-LINK
+
+5. 固件烧录
+将STM32连接到计算机，通过编程工具（如ST-LINK）烧录固件。
+在STM32CubeIDE中，编写代码后通过“Build”生成二进制文件，然后通过“Debug”或“Download”将其烧录到STM32。
+
+6. 外设和I/O
+GPIO：通用输入/输出引脚，用于连接LED、按钮、传感器等外设。
+通信接口：I2C、SPI、USART、CAN、USB等，用于与其他设备通信。
+定时器和中断：用于精确的时间控制和事件响应。
+
+7. 调试
+调试工具：通过ST-LINK或J-Link进行单步调试、断点设置、变量监视等操作。
+串口调试：通过USART接口与串口监视器通信，查看调试信息。

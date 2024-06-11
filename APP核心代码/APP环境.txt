@@ -1,0 +1,40 @@
+[ 开发计算机 ]
+  - 操作系统：Windows 10
+  - 开发平台： Android Studio
+  - JDK 11
+
+----
+[ Android 设备 ]
+  - Android 版本：6.0 (API 23) 
+  - 启用开发者模式和 USB 调试
+
+----
+[ Android Studio 中的项目配置 ]
+  - build.gradle (Project)：
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.0'
+    }
+
+  - build.gradle (Module: app)：
+    android {
+        compileSdkVersion 30
+        defaultConfig {
+            applicationId "com.example.myapp"
+            minSdkVersion 21
+            targetSdkVersion 30
+        }
+    }
+
+    dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    }
